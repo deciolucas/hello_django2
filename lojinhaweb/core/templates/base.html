@@ -14,14 +14,42 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" media="screen" />
     <!-- Custom styles for this template -->  
-    <link rel="stylesheet" href="{% static 'css/estilo.css' %}" media="screen" />  
-    <link rel="stylesheet" href="{% static 'css/product.css' %}" media="screen" />
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}" media="screen" /> 
     <!-- FontAwesome CSS -->    
     <link rel="stylesheet" href="{% static 'css/all.css' %}" media="screen" />
     
   </head>
   <body>
- 
+    
+      {% block cabecalho %}
+
+      {% endblock cabecalho %}
+   
+
+<nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between" >
+        <a class="py-2" href="#" aria-label="Product">        
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" color="orange" 
+            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+            <!--Usando icone FontAwesome-->
+            {% comment %} <i class="fas fa-globe-americas"></i> {% endcomment %}
+        </a>
+
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'index' %}">Inicio</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'produto' %}">Produtos</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'lista_produtos' %}">Lista de Produtos</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'contato' %}">Contato</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Suporte</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Carrinho</a>
+        </div>
+    </nav>
+
+<div class="barra_sup">
+    {% block barra_sup %}
+
+    {% endblock barra_sup %}
+</div>
+
 <!--definindo o conteudo do base.html -->
 <div class="container">
     {% block container %}
@@ -30,129 +58,6 @@
 </div>
 
 
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-    <div class="my-3 py-3">
-      <h2 class="display-5">IPhone XVI</h2>
-      <p class="lead">Vai quere ou vai correr?.</p>
-    </div>
-    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Notebook Gamer</h2>
-      <p class="lead">Super, Hiper, Mega, roda até biscoito maizena.</p>
-      <p class="lead">Som fodastico, imagem de cair o queixo.</p>
-    </div>
-    <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-</div>
-
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Fone de Ouvido</h2>
-      <p class="lead">O melhor dos melhores Senhor.</p>
-    </div>
-    <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-  <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-    <div class="my-3 py-3">
-      <h2 class="display-5">Mouse Gamer</h2>
-      <p class="lead">Olha isso.</p>
-    </div>
-    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-</div>
-
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Monitor 35 Polegadas</h2>
-      <p class="lead">Dá pra ver o mundo todo.</p>
-    </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 py-3">
-      <h2 class="display-5">Placa de Video</h2>
-      <p class="lead">Se era resolução que faltava pra voce, nao falta mais.</p>
-    </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-</div>
-
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Cadeira Gamer</h2>
-      <p class="lead">Tipo igual um abraço gostoso.</p>
-    </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 py-3">
-      <h2 class="display-5">Mesa Escritorio</h2>
-      <p class="lead">Aguenta um peso que voce nao acredita.</p>
-    </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-  </div>
-</div>
-
-
-
-
-
-<footer class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" color="orange"
-      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-      <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>     
-    </div>
-    <div class="col-6 col-md">
-      <h5>Recursos</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Coisas Legais</a></li>
-        <li><a class="text-muted" href="#">Novidades</a></li>
-        <li><a class="text-muted" href="#">Time de Desenvolvimento</a></li>
-        <li><a class="text-muted" href="#">Coisas para desenvolvedores</a></li>
-        <li><a class="text-muted" href="#">Fale Conosco</a></li>
-        <li><a class="text-muted" href="#">Equipe Administrativa</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Produtos</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Celulares</a></li>
-        <li><a class="text-muted" href="#">Notebooks</a></li>
-        <li><a class="text-muted" href="#">CAdeiras Gamers</a></li>
-        <li><a class="text-muted" href="#">Placas de Videos</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Setores</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Negocios</a></li>
-        <li><a class="text-muted" href="#">Financeiro</a></li>
-        <li><a class="text-muted" href="#">Administrativo</a></li>
-        <li><a class="text-muted" href="#">Loja</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Sobre</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Equipe</a></li>
-        <li><a class="text-muted" href="#">Localização</a></li>
-        <li><a class="text-muted" href="#">Área Privativa</a></li>
-        <li><a class="text-muted" href="#">Termos</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-  
   <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
 
-{% comment %} <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script> {% endcomment %}
 </html>
