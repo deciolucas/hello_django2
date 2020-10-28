@@ -12,3 +12,12 @@
         font-size: 3.5rem;
     }
 }
+#cabecalho{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(73, 20, 220);
+}
+#contbase{
+   height: 100%;
+   width: 100%;
+}

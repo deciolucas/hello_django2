@@ -5,10 +5,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    texts = ['Lorem ipsum dolor sit amet',
-             'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...']
-    context = {
-        'title': 'Lojinha Web',
-        'texts': texts
-    }
-    return render(request, 'index.html', context)
+    
+    return render(request, 'index.html')
